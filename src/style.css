@@ -1,0 +1,136 @@
+:root {
+  --color-light: #FFFFFF;
+  --color-dark: #000000;
+  --color-dark-light: #E5E5E5;
+  --color-primary: #14213D;
+  --color-secondary: #FCA311;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-primary);
+  margin-top: 6.8rem;
+}
+
+.card {
+  width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 15%);
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 15%);
+  border-radius: 8px;
+  position: relative;
+}
+
+.card--title {
+  margin-bottom: .5rem;
+}
+
+.card--description {
+  font-size: .8rem;
+  font-style: italic;
+}
+
+.card--content {
+  margin-top: 2rem;
+}
+
+.options-panel--header,
+.options-panel--common,
+.options-panel--footer {
+  display: grid;
+  margin-bottom: 1.5rem;
+}
+
+.options-panel--header label,
+.options-panel--common label,
+.options-panel--footer label {
+  width: 100%;
+}
+
+.options-panel--header {
+  grid-template-columns: 1fr 1fr;
+}
+
+.options-panel--common {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: .5rem;
+}
+
+.options-panel--footer {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.options-panel--footer label {
+  font-size: .8rem;
+}
+
+.options-panel--footer label input {
+  display: block;
+  margin-top: .5rem;
+  padding: .4rem;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid rgb(0 0 0 / 15%);
+}
+
+.output {
+  display: block;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid var(--color-dark);
+  text-align: center;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.checkbox {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: .4rem .8rem;
+  background: var(--color-dark-light);
+}
+
+.checkbox input:checked~span {
+  background: var(--color-secondary);
+}
+
+#btn-generate {
+  display: block;
+  width: 100%;
+  margin-top: 2rem;
+  padding: .5rem;
+  background: var(--color-secondary);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla JS Password Generator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="card">
+    <h1 class="card--title">🔑 Password Generator</h1>
+    <p class="card--description">This is a simple random password generator.</p>
+
+    <div class="card--content">
+
+      <input type="text" class="output" id="output">
+
+      <div class="options-panel">
+
+        <div class="options-panel--header">
+          <label for="pwd-type-string" class="checkbox">
+            <input type="radio" id="pwd-type-string" name="pwd-type" value="string" checked>
+            <span>String</span>
+          </label>
+
+          <label for="pwd-type-words" class="checkbox">
+            <input type="radio" id="pwd-type-words" name="pwd-type" value="words">
+            <span>Words</span>
+          </label>
+        </div>
+
+        <div class="options-panel--common">
+          <label for="opt-uppercase" class="checkbox">
+            <input type="checkbox" id="opt-uppercase" name="uppercase" checked>
+            <span>Uppercase</span>
+          </label>
+
+          <label for="opt-lowercase" class="checkbox">
+            <input type="checkbox" id="opt-lowercase" name="lowercase" checked>
+            <span>Lowercase</span>
+          </label>
+
+          <label for="opt-digits" class="checkbox">
+            <input type="checkbox" id="opt-digits" name="digits" checked>
+            <span>Digits</span>
+          </label>
+
+          <label for="opt-symbols" class="checkbox">
+            <input type="checkbox" id="opt-symbols" name="symbols" checked>
+            <span>Symbols</span>
+          </label>
+
+          <label for="opt-prefix" class="checkbox">
+            <input type="checkbox" id="opt-prefix" name="prefix">
+            <span>Prefix</span>
+          </label>
+
+          <label for="opt-suffix" class="checkbox">
+            <input type="checkbox" id="opt-suffix" name="suffix">
+            <span>Suffix</span>
+          </label>
+        </div>
+
+        <div class="options-panel--footer">
+          <label for="opt-numberofwords">
+            Number of words
+            <input type="text" id="opt-numberofwords" value="3" name="numberOfWords">
+          </label>
+
+          <label for="opt-delimiter">
+            Delimiter
+            <input type="text" id="opt-delimiter" value="-" name="delimiter">
+          </label>
+
+          <label for="opt-length">
+            Length
+            <input type="text" id="opt-length" value="16" name="passwordLength">
+          </label>
+
+          <!-- <label for="opt-wordlist">
+            Wordlist URL
+            <input type="text" id="opt-wordlist" />
+          </label> -->
+        </div>
+      </div> <!-- end .options-panel -->
+
+      <button id="btn-generate">Generate</button>
+    </div> <!-- end .card--content -->
+  </div> <!-- end .card -->
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
