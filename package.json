@@ -1,0 +1,28 @@
+{
+  "name": "vanilla-js-password-generator",
+  "version": "1.0.0",
+  "description": "- [X] Type of password (Words | String)\r - [X] Uppercase\r - [X] Lowercase\r - [X] Digits\r - [X] Symbols\r - [X] Prefix\r - [X] Suffix\r - [X] Length\r - [X] Number of words\r - [X] Delimiter\r - [ ] Link to external wordlist?",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madsaune/vanilla-js-password-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madsaune/vanilla-js-password-generator/issues"
+  },
+  "homepage": "https://github.com/madsaune/vanilla-js-password-generator#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}

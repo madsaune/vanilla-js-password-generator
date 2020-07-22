@@ -1,25 +1,24 @@
-import Passwordly from '../lib/passwordly.js';
+import Passwordly from '../lib/passwordly';
 
-window.addEventListener('DOMContentLoaded', (event) => {
-
+window.addEventListener('DOMContentLoaded', () => {
   const settings = {};
   let passwordType = 'string';
-  const outputField = document.querySelector("#output");
-  const btnGenerate = document.querySelector("#btn-generate");
+  const outputField = document.querySelector('#output');
+  const btnGenerate = document.querySelector('#btn-generate');
   const radiobuttons = document.querySelectorAll('input[type=radio');
   const checkboxes = document.querySelectorAll('input[type=checkbox]');
   const inputFields = document.querySelectorAll('.options-panel--footer input[type=text]');
 
   radiobuttons.forEach((item) => {
-    item.addEventListener('click', (evt) => {
+    item.addEventListener('click', () => {
       passwordType = item.value;
     });
   });
 
   checkboxes.forEach((item) => {
-    settings[item.name] = item.checked ? true : false;
-    item.addEventListener('change', (evt) => {
-      settings[item.name] = item.checked ? true : false;
+    settings[item.name] = !!item.checked;
+    item.addEventListener('change', () => {
+      settings[item.name] = !!item.checked;
     });
   });
 
@@ -27,14 +26,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     if (item.name === 'delimiter') {
       settings[item.name] = item.value;
     } else {
-      settings[item.name] = parseInt(item.value);
+      settings[item.name] = parseInt(item.value, 10);
     }
 
-    item.addEventListener('change', (evt) => {
+    item.addEventListener('change', () => {
       if (item.name === 'delimiter') {
         settings[item.name] = item.value;
       } else {
-        settings[item.name] = parseInt(item.value);
+        settings[item.name] = parseInt(item.value, 10);
       }
     });
   });
@@ -45,5 +44,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
   });
 
   outputField.value = Passwordly(passwordType, settings);
-
 });
