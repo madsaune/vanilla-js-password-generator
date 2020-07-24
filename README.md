@@ -1,5 +1,9 @@
 # Simple Password Generator
 
+A very simple Password Generator in vanilla Javascript.
+
+Demo: https://simple-password-generator.netlify.app/
+
 ## Options
 
 - [X] Type of password (Words | String)
